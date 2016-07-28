@@ -6,7 +6,7 @@ def mock_auth_hash
     'uid' => '123545',
     'extra' => {
       'raw_info' => {
-        'screen_name' => 'mock_screen_name'
+        'screen_name' => 'mock_user_name'
       },
     },
     'credentials' => {
