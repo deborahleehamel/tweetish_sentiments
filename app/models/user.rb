@@ -4,17 +4,10 @@ class User < ApplicationRecord
     where(uid: auth_info[:uid]).first_or_create do |new_user|
       new_user.uid                = auth_info.uid
       new_user.screen_name        = auth_info.extra.raw_info.screen_name
-      new_user.oauth_token        = auth_info.credentials.token
-      new_user.oauth_token_secret = auth_info.credentials.secret
+      new_user.token              = auth_info.credentials.token
+      new_user.secret             = auth_info.credentials.secret
+      # new_user.provider           = auth_info.
     end
   end
 
-  def twitter
-    @client ||= Twitter::REST::Client.new do |config|
-      config.consumer_key        = "YOUR_CONSUMER_KEY"
-      config.consumer_secret     = "YOUR_CONSUMER_SECRET"
-      config.access_token        = oauth_token
-      config.access_token_secret = oauth_token_secret
-    end
-  end
 end

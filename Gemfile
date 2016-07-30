@@ -31,6 +31,7 @@ gem 'omniauth-twitter'
 gem 'figaro'
 gem 'twitter'
 gem 'twitter-bootstrap-rails'
+gem 'faraday'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -38,6 +39,9 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
+  gem 'vcr'
+  gem 'webmock'
+  gem 'database_cleaner'
 end
 
 group :development do
