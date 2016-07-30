@@ -15,8 +15,8 @@ describe TwitterService do
       tweet  = tweets.first
 
       expect(tweets.count).to be > 10
-      expect(tweet[:user][:screen_name]).to eq "dhamel"
-      expect(tweet[:user][:id]).to eq 546612
+      expect(tweet.user.screen_name).to eq "BrycePropheter"
+      expect(tweet.user.id).to eq 344462283
     end
   end
 

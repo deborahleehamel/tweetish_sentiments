@@ -24,9 +24,9 @@ class TwitterService
   end
 
   def home_timeline
-    client.home_timeline.map do |tweet|
-      tweet.text
-    end
+    client.home_timeline#.map do |tweet|
+    #   tweet.text
+    # end
   end
 
   def user_timeline(user)
