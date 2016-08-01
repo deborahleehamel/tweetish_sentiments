@@ -6,7 +6,8 @@ class User < ApplicationRecord
       new_user.screen_name        = auth_info.extra.raw_info.screen_name
       new_user.token              = auth_info.credentials.token
       new_user.secret             = auth_info.credentials.secret
-      # new_user.provider           = auth_info.
+      new_user.provider           = auth_info.provider
+      new_user.profile_image      = auth_info.info.image
     end
   end
 
