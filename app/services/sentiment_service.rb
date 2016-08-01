@@ -8,16 +8,22 @@ class SentimentService
     end
   end
 
-  def get_sentiment(text = "I love Nick")
+  def get_sentiment(text = "I love Ioanna")
     response = @conn.get do |req|
       req.url '/api/'
       req.params['text'] = text
       req.headers['X-Mashape-Key'] = ENV['MASHAPE_KEY']
       req.headers['Accept'] = 'application/json'
     end
-    sentiment = parse(response)
-    # require "pry"; binding.pry
-    "Sentiment is #{sentiment["sentiment"]} with a score of #{sentiment["score"] * 100.00}%"
+    sentiment = normalize_sentiment(parse(response))
+    [sentiment["sentiment"], (sentiment["score"] * 100.00)]
+  end
+
+  def normalize_sentiment(sentiment)
+    sentiment["sentiment"] = "Positive" if sentiment["sentiment"] == "positiive"
+    sentiment["sentiment"] = "Negative" if sentiment["sentiment"] == "negative"
+    sentiment["sentiment"] = "Neutral"  if sentiment["sentiment"] == "neutral"
+    sentiment
   end
 
 

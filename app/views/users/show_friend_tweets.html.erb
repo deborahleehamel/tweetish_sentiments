@@ -1,0 +1,37 @@
+<div class="container text-center transparent2">
+  <div class="row">
+    <div class="col-xs-6">
+      <h1>Analysis Of <%= @friend[0] %>'s last 10 tweets</h1>
+    </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-6">
+      <%= image_tag @friend[1] %><br>
+      <%= @friend[0] %>
+    </ul>
+    </div>
+  </div>
+  <!-- all this could be in a partial -->
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="tweets">
+        <table>
+          <tr>
+            <th>Tweets</th>
+            <th>Analysis</th>
+            <th>Score</th>
+          </tr>
+          <% @tweets.each do |tweet| %>
+            <tr>
+              <td><%= tweet[0] %></td>
+              <td><%= tweet[1][0] %></td>
+              <td><%= tweet[1][1].to_s + '%' %></td>
+            </tr>
+          <% end %>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

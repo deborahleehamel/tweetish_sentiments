@@ -1,0 +1,23 @@
+<div class="container text-center transparent2">
+  <div class="row">
+    <div class="col-xs-6">
+      <h1>Select your friend and analyze their tweets</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <% @friends.each do |friend| %>
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="<%= friend[1] %>" alt="...">
+          <div class="caption">
+            <h3><%= friend[0] %></h3>
+            <p>...</p>
+            <p><a href="<%= friend_tweets_path(user: friend) %>" class="btn btn-primary" role="button">Analyze Tweets</a></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+</div>

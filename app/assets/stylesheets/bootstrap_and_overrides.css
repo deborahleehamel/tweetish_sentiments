@@ -6,29 +6,75 @@
   =require twitter-bootstrap-static/fontawesome
   */
   body {
-  background: url(tweetish_bg2.jpg);
+  background: url(tweetish_bg3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 
 }
 
-.main_box {
+/*.main_box {
   width: 500px;
   height: 1000px;
   border: 1px solid white;
   box-sizing: border-box;
+}*/
+
+/*.landing_box {
+  margin-top: -50px;
+  padding-bottom: 100px;
+  height: 100px;
+  color:#DADFE1;
+  background-color: #48596c;
+  h1 {
+    font-weight: 300;
+    margin-bottom: 0px;
+  }
+  h3 {
+    font-weight: 300;
+    margin-bottom: 40px;
+  }
 }
 
 .logo {
   max-width: 60px;
   padding-left: 5px;
-}
-
+}*/
 
 .transparent {
-  background:rgba(255,255,255,0.5);
-  margin: 0 auto;
+  /*background:rgba(255,255,255,0.5);*/
+  /*margin-left: 500px;
+  margin-right: 200px;
+  width: 50%;
   display: inline-block;
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;*/
+  /*margin:auto;
+  height: 400px;
+  width: 400px;
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;*/
+}
+.transparent2 {
+  /*background:rgba(255,255,255,0.5);*/
+  /*margin-left: 500px;
+  margin-right: 200px;
+  width: 50%;
+  display: inline-block;
+  width: 400px;
+  height: 400px;*/
+  /*margin:auto;
+  height: 400px;
+  width: 400px;
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;*/
+}
+
+.landing_text {
+  color: white;
 }
