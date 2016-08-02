@@ -1,20 +1,12 @@
+
 <div class="container text-center">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-  <h1 class="landing_text">Are you POSITIVE or NEGATIVE?</h1>
-  <h3 class="landing_text">Analyze tweets to discover their sentiment.</h3>
-</div>
-  </div>
-</div>
-<div class="container text-center transparent">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <% if current_user %>
-          <%= link_to "Back to my Dashboard!", dashboard_path, class:"btn btn-primary btn-nav" %>
-        <% else %>
-          <%= link_to "Sign in with Twitter", twitter_login_path, class:"btn btn-primary btn-nav" %>
-          <div>Analyze your tweets!</div>
-      <% end %>
-    </div>
+  <div class="jumbotron">
+    <h1>Are you Positive or Negative?</h1>
+    <p>Analyze tweets to discover their sentiment.</p>
+    <% if current_user %>
+        <%= link_to "Back to my Dashboard!", dashboard_path, class:"btn btn-primary btn-lg" %>
+      <% else %>
+        <%= link_to "Sign in with Twitter", twitter_login_path, class:"btn btn-primary btn-lg" %>
+    <% end %>
   </div>
 </div>

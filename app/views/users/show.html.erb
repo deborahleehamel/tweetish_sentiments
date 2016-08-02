@@ -1,6 +1,6 @@
-<div class="container text-center transparent2">
+<div class="container text-center">
   <div class="row">
-    <div class="col-xs-6">
+    <div class="col-xs-12">
       <h1>Analyze Your last 10 tweets</h1>
       <!-- <p><%#= link_to "Analyze Your Friends Tweets", twitter_login_path, class:"btn btn-primary btn-nav" %></p> -->
     </ul>
@@ -8,7 +8,7 @@
   </div>
 
   <div class="row">
-    <div class="col-xs-6">
+    <div class="col-xs-12">
       <%= image_tag current_user.profile_image %><br>
       <%= current_user.screen_name %>
     </ul>
@@ -16,16 +16,16 @@
   </div>
   <!-- all this could be in a partial -->
   <div class="row">
-    <div class="col-xs-6">
+    <div class="col-xs-12">
       <div class="tweets">
-        <table>
+        <table class="table table_striped">
           <tr>
             <th>Tweets</th>
             <th>Analysis</th>
             <th>Score</th>
           </tr>
           <% @tweets.each do |tweet| %>
-            <tr>
+            <tr class="transparent">
               <td><%= tweet[0] %></td>
               <td><%= tweet[1][0] %></td>
               <td><%= tweet[1][1].to_s + '%' %></td>
