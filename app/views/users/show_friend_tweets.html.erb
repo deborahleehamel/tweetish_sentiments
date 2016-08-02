@@ -1,13 +1,13 @@
 <div class="container text-center transparent2">
   <div class="row">
-    <div class="col-xs-6">
+    <div class="col-xs-12">
       <h1>Analysis Of <%= @friend[0] %>'s last 10 tweets</h1>
     </ul>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-xs-6">
+    <div class="col-xs-12">
       <%= image_tag @friend[1] %><br>
       <%= @friend[0] %>
     </ul>
@@ -15,16 +15,16 @@
   </div>
   <!-- all this could be in a partial -->
   <div class="row">
-    <div class="col-xs-6">
+    <div class="col-xs-12">
       <div class="tweets">
-        <table>
+        <table class="table table_striped">
           <tr>
-            <th>Tweets</th>
-            <th>Analysis</th>
-            <th>Score</th>
+            <th><h2>Tweets</h2></th>
+            <th><h2>Analysis</h2></th>
+            <th><h2>Score</h2></th>
           </tr>
           <% @tweets.each do |tweet| %>
-            <tr>
+            <tr class="transparent">
               <td><%= tweet[0] %></td>
               <td><%= tweet[1][0] %></td>
               <td><%= tweet[1][1].to_s + '%' %></td>

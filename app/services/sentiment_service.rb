@@ -12,7 +12,7 @@ class SentimentService
     response = @conn.get do |req|
       req.url '/api/'
       req.params['text'] = text
-      req.headers['X-Mashape-Key'] = ENV['MASHAPE_KEY']
+        req.headers['X-Mashape-Key'] = ENV['MASHAPE_KEY']
       req.headers['Accept'] = 'application/json'
     end
     sentiment = normalize_sentiment(parse(response))
