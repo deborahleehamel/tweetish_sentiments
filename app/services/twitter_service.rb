@@ -13,7 +13,7 @@ class TwitterService
     @user = user
   end
 
-  def get_tweets(user = user.screen_name)
+  def get_tweets(user = @user.screen_name)
     client.user_timeline(user).take(10).map do |tweet|
       [tweet.text, sentiment.get_sentiment(tweet.text)]
     end

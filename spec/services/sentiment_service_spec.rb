@@ -5,13 +5,13 @@ describe SentimentService do
     @service = SentimentService.new
   end
 
-  it "returns tweets from home timeline" do
+  it "returns sentiment for text" do
     VCR.use_cassette("get_sentiment") do
-      text = "@jbaseball44 the things we do for love"
+      text = "I love this"
 
       results = @service.get_sentiment(text)
 
-      expect(results).to be "Negative"
+      expect(results[0]).to eq "Positive"
     end
   end
 
