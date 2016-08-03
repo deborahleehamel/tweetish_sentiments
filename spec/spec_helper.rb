@@ -1,7 +1,12 @@
+require 'simplecov'
+SimpleCov.start("rails")
+
 require 'omniauth-twitter'
 require 'pry'
 require 'vcr'
 require 'database_cleaner'
+
+
 
 VCR.configure do |c|
   c.cassette_library_dir = "spec/cassettes"
