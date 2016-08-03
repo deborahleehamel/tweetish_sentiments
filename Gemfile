@@ -32,6 +32,7 @@ gem 'figaro'
 gem 'twitter'
 gem 'twitter-bootstrap-rails'
 gem 'faraday'
+gem 'simplecov', :require => false, :group => :test
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

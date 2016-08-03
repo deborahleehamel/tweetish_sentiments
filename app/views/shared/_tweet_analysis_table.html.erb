@@ -1,14 +1,18 @@
 <div class="row">
   <div class="col-xs-12">
     <div class="tweets">
-      <table class="table table_striped">
-        <tr>
-          <th><h2>Tweets</h2></th>
-          <th><h2>Sentiment</h2></th>
+      <table class="table">
+        <tr>          <div class= "text-center"><%= image_tag("positive_emoji.jpg", :alt => "Trending Positive", style:"height: 50px;") %><%= image_tag("negative_emoji.jpg", :alt => "Trending Negative", style:"height: 50px;") %></div>
+
+        </tr>
+        <tr class="landing_text">
+          <th><h1>Tweets</h1></th>
+          <th><h1>Sentiment</h1>
+        </th>
           <!-- <th><h2>Score</h2></th> -->
         </tr>
         <% @tweets.each do |tweet| %>
-          <tr class="transparent">
+          <tr class="bg-primary"">
             <td><%= tweet[0] %></td>
             <td><%= tweet[1][0] %></td>
             <!-- <td> tweet[1][1].to_s + '%''</td> -->
