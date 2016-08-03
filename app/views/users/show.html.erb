@@ -1,7 +1,7 @@
 <div class="container text-center">
   <div class="row">
     <div class="col-xs-12">
-      <h1>Analyze Your last 10 tweets</h1>
+      <h1 class="landing_text">Analyze your last 10 tweets</h1>
       <!-- <p><%#= link_to "Analyze Your Friends Tweets", twitter_login_path, class:"btn btn-primary btn-nav" %></p> -->
     </ul>
     </div>
@@ -14,25 +14,6 @@
     </ul>
     </div>
   </div>
-  <!-- all this could be in a partial -->
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="tweets">
-        <table class="table table_striped">
-          <tr>
-            <th>Tweets</th>
-            <th>Analysis</th>
-            <th>Score</th>
-          </tr>
-          <% @tweets.each do |tweet| %>
-            <tr class="transparent">
-              <td><%= tweet[0] %></td>
-              <td><%= tweet[1][0] %></td>
-              <td><%= tweet[1][1].to_s + '%' %></td>
-            </tr>
-          <% end %>
-        </table>
-      </div>
-    </div>
-  </div>
+
+    <%= render partial: "shared/tweet_analysis_table" %>
 </div>
