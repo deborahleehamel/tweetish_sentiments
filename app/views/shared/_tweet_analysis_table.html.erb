@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-xs-12">
+    <div class="tweets">
+      <table class="table table_striped">
+        <tr>
+          <th><h2>Tweets</h2></th>
+          <th><h2>Sentiment</h2></th>
+          <!-- <th><h2>Score</h2></th> -->
+        </tr>
+        <% @tweets.each do |tweet| %>
+          <tr class="transparent">
+            <td><%= tweet[0] %></td>
+            <td><%= tweet[1][0] %></td>
+            <!-- <td> tweet[1][1].to_s + '%''</td> -->
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>

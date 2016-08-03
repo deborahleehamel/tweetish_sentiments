@@ -1,12 +1,14 @@
+<div class="jumbotron text-center">
+  <h1 class="display-3">Positive or Negative?</h1>
+  <!-- <h1 class="display-3">Analyze your tweets!</h1> -->
 
-<div class="container text-center">
-  <div class="jumbotron">
-    <h1>Are you Positive or Negative?</h1>
-    <p>Analyze tweets to discover their sentiment.</p>
+  <p class="lead">Analyze tweets to discover their sentiment.</p>
+  <hr class="m-y-2">
+  <p class="lead">
     <% if current_user %>
         <%= link_to "Back to my Dashboard!", dashboard_path, class:"btn btn-primary btn-lg" %>
       <% else %>
         <%= link_to "Sign in with Twitter", twitter_login_path, class:"btn btn-primary btn-lg" %>
     <% end %>
-  </div>
+  </p>
 </div>

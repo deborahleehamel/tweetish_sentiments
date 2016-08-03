@@ -9,25 +9,8 @@
   </head>
 
   <body>
-    <div class="container">
-<nav class="navbar" role="navigation">
-    <div class="navbar-header">
-      <!-- link_to image_tag("tweetish_sentiments_logo.jpg"), root_path -->
-    </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <% if !current_user %>
-      <ul class="nav navbar-nav navbar-right">
-      </ul>
-      <% else %>
-      <ul class="nav navbar-nav navbar-right">
-        <!-- <li><a href="#" class="btn btn-primary btn-nav">Analyze Tweets</a></li> -->
-        <!-- <li>link_to "Friends", friends_path, class:"btn btn-primary btn-nav"</li> -->
-        <li><%= link_to "Log Out", logout_path, class:"btn btn-primary btn-nav" %></li>
-      </ul>
-    <% end %>
-    </div><!-- /.navbar-collapse -->
-</nav>
-</div>
+
+      <%= render partial: "shared/nav" %>
 
     <div class="container">
  <div class="row">
