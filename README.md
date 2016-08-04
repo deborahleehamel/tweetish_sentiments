@@ -1,6 +1,6 @@
 ## Tweetitudes
 
-Tweetitudes is a rails 5.0 application that uses a twitter gem to consume data from the Twitter RESTAPI and the Mashape - Tweet Sentiment Analysis API.
+Tweetitudes is a rails 5.0 application that uses a twitter gem to consume data from the Twitter REST API and the Mashape - Tweet Sentiment Analysis API.
 
 See LIVE app at: http://tweetitude.herokuapp.com/
 
