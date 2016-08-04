@@ -1,24 +1,19 @@
-# README
+## Tweetitudes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Tweetitudes is a rails 5.0 application that uses a twitter gem to consume data from the Twitter RESTAPI and the Mashape - Tweet Sentiment Analysis API
+### Setup
 
-Things you may want to cover:
+To get set up with the tweetitude application, clone it
+via `git` and pull in gem dependencies with `bundler`:
 
-* Ruby version
+```sh
+$ git clone https://github.com/deborahleehamel/tweetish_sentiments.git
+$ cd tweetish_sentiments
+$ bundle update
+```
 
-* System dependencies
+And set up the database:
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+bundle exec rake db:{create,setup}
+```
